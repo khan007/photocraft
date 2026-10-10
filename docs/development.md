@@ -269,7 +269,7 @@ bench `--json` support through `photocraft_testkit::perf::{row, report, write_re
 `[[scenario]]` to `perf/budgets.toml` and run `cargo xtask scorecard`.
 
 **CI.** `ci.yml` runs `cargo xtask scorecard --check`. `perf-nightly.yml` runs `cargo xtask perf`
-on a fixed macOS runner every night (and on demand), posts the table as the job summary, uploads
+on a fixed macOS runner on demand only (Actions → Run workflow), posts the table as the job summary, uploads
 `results.json`, and fails on a broken budget or regression. It never runs on pull requests: the
 release build of the benches alone takes longer than PR CI should. To give the nightly runner
 its own baseline, run the workflow by hand with `update_baseline` and commit the `perf-baseline`
